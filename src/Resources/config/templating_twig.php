@@ -14,7 +14,6 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 use Kozhilya\BreadcrumbsBundle\TwigExtensions\BreadcrumbsTwigExtension;
 use Symfony\Bridge\Twig\Extension\LogoutUrlExtension;
 use Symfony\Bridge\Twig\Extension\SecurityExtension;
-use Kozhilya\ImageBundle\TwigExtensions\ImageTwigExtension;
 
 return static function (ContainerConfigurator $container) {
     $container->services()
@@ -24,18 +23,5 @@ return static function (ContainerConfigurator $container) {
             service('twig'),
         ])
         ->tag('twig.extension')
-
-//        ->set('twig.extension.logout_url', LogoutUrlExtension::class)
-//            ->args([
-//                service('security.logout_url_generator'),
-//            ])
-//            ->tag('twig.extension')
-
-//        ->set('twig.extension.security', SecurityExtension::class)
-//            ->args([
-//                service('security.authorization_checker')->ignoreOnInvalid(),
-//                service('security.impersonate_url_generator')->ignoreOnInvalid(),
-//            ])
-//            ->tag('twig.extension')
     ;
 };
