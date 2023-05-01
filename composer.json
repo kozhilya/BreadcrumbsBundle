@@ -1,0 +1,21 @@
+{
+    "name": "teswa/breadcrumbs-bundle",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Teswa\\BreadcrumbsBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kozhilya",
+            "email": "kozhilya@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/dependency-injection": "^6.2",
+        "symfony/routing": "^6.2",
+        "symfony/twig-bundle": "^6.2",
+        "doctrine/orm": "^2.14"
+    }
+}
