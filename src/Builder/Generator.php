@@ -22,22 +22,11 @@ class Generator
     }
 
     /**
-     * @param string $action
-     * @param array ...$params
-     * @return void
-     * @throws Exception
-     */
-    public function parentRoot(string $action, ...$params): void
-    {
-        $node = $this->service->getNode($action);
-
-        $node->run($this, $action, null, ... $params);
-    }
-
-    /**
-     * @param string $action
-     * @param mixed|null $entity
-     * @param array ...$params
+     * Указать элемент крошки, который отображается перед добавляемой
+     *
+     * @param string $action Код хлебной крошки, который отображается перед добавляемой
+     * @param mixed|null $entity #Entity Объект, к которому относится хлебная крошка (или `null`, если крошка не относится к объекту)
+     * @param array ...$params Дополнительные параметры
      * @return void
      * @throws Exception
      */
@@ -49,17 +38,22 @@ class Generator
     }
 
     /**
-     * @param string $name
-     * @param string $path
-     * @param array $params
+     * Добавить элемент крошки
+     *
+     * @param string $text HTML отображаемого текстового содержимого крошки
+     * @param string $route #Route Путь, на который будет указывать хлебная крошка
+     * @param array $params Дополнительные параметры
+     *
      * @return void
      */
-    public function append(string $name, string $path, array $params = []): void
+    public function append(string $text, string $route, array $params = []): void
     {
-        $this->items[] = new Item($name, $path, $params);
+        $this->items[] = new Item($text, $route, $params);
     }
 
     /**
+     * Получить список всех добавленных элементов крошек
+     *
      * @return Item[]
      */
     public function getItems(): array

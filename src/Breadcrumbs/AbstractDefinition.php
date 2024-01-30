@@ -53,7 +53,7 @@ abstract class AbstractDefinition implements DefinitionInterface
     /**
      * Сгенерировать URL для пути с параметрами
      *
-     * @param string $route Название пути
+     * @param string $route #Route Название пути
      * @param array $parameters Параметры пути
      * @param int $referenceType Тип ссылки
      * @return string

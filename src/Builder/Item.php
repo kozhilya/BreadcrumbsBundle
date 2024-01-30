@@ -5,6 +5,7 @@ namespace Kozhilya\BreadcrumbsBundle\Builder;
 
 /**
  * Реальный элемент хлебных крошек
+ * @internal
  */
 class Item
 {
