@@ -41,14 +41,16 @@ class Generator
      * Добавить элемент крошки
      *
      * @param string $text HTML отображаемого текстового содержимого крошки
-     * @param string $route #Route Путь, на который будет указывать хлебная крошка
+     * @param string $url Ссылка хлебной крошки
      * @param array $params Дополнительные параметры
+     *
+     * @see AbstractDefinition::generateUrl
      *
      * @return void
      */
-    public function append(string $text, string $route, array $params = []): void
+    public function append(string $text, string $url, array $params = []): void
     {
-        $this->items[] = new Item($text, $route, $params);
+        $this->items[] = new Item($text, $url, $params);
     }
 
     /**
