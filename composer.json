@@ -13,9 +13,9 @@
         }
     ],
     "require": {
-        "symfony/dependency-injection": "^6.2",
-        "symfony/routing": "^6.2",
-        "symfony/twig-bundle": "^6.2",
-        "doctrine/orm": "^2.14"
+        "symfony/dependency-injection": "^7.0",
+        "symfony/routing": "^7.0",
+        "symfony/twig-bundle": "^7.0",
+        "doctrine/orm": "^2.17"
     }
 }
