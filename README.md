@@ -2,7 +2,7 @@
 
 ## Установка
 ```
-composer require teswa/breadcrumbs-bundle
+composer require kozhilya/breadcrumbs-bundle
 ```
 
 ## Использование
