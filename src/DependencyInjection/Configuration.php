@@ -7,7 +7,7 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
 class Configuration implements ConfigurationInterface
 {
-    public function getConfigTreeBuilder(): mixed
+    public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('kozhilya_breadcrumbs');
 
