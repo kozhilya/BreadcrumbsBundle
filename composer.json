@@ -1,9 +1,9 @@
 {
-    "name": "teswa/breadcrumbs-bundle",
+    "name": "kozhilya/breadcrumbs-bundle",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Teswa\\BreadcrumbsBundle\\": "src/"
+            "Kozhilya\\BreadcrumbsBundle\\": "src/"
         }
     },
     "authors": [
