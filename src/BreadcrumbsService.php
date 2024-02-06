@@ -66,4 +66,9 @@ class BreadcrumbsService
 
         return $generator;
     }
+
+    public function getTemplate(): string
+    {
+        return $this->config['template'];
+    }
 }

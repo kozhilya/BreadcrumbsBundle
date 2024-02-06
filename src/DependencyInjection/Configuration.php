@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
             ->scalarPrototype()
             ->end() // service_namespaces.prototype
             ->end() // service_namespaces
-            ->scalarNode('template')->defaultValue('@KozhilyaBreadcrumbs/bootstrap5.html.twig')->end()
+            ->scalarNode('template')->defaultValue('@KozhilyaBreadcrumbs/simple.html.twig')->end()
             ->end() // root.children
             ->end();
     }

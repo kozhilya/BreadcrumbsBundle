@@ -48,7 +48,7 @@ class BreadcrumbsTwigExtension extends AbstractExtension
             return '';
         }
 
-        return $this->twig->render('@KozhilyaBreadcrumbs/bootstrap5.html.twig', [
+        return $this->twig->render($this->breadcrumbsService->getTemplate(), [
             'items' => $this->generator->getItems()
         ]);
     }
