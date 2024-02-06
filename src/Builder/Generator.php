@@ -44,9 +44,9 @@ class Generator
      * @param string $url Ссылка хлебной крошки
      * @param array $params Дополнительные параметры
      *
+     * @return void
      * @see AbstractDefinition::generateUrl
      *
-     * @return void
      */
     public function append(string $text, string $url, array $params = []): void
     {

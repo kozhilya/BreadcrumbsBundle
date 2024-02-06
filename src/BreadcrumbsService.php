@@ -18,6 +18,13 @@ class BreadcrumbsService
      */
     protected array $nodes;
 
+    /**
+     * Конструктор сервиса
+     *
+     * @param array $config
+     * @param iterable $breadcrumbsDefinitions
+     * @param ContainerInterface $container
+     */
     public function __construct(
         protected array $config,
         iterable $breadcrumbsDefinitions,
@@ -59,6 +66,9 @@ class BreadcrumbsService
         );
     }
 
+    /**
+     * @throws Exception
+     */
     public function build(string $action, mixed $entity = null, ...$params): Generator
     {
         $generator = new Generator($this);

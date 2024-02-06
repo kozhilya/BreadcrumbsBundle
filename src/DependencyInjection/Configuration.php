@@ -2,6 +2,7 @@
 
 namespace Kozhilya\BreadcrumbsBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 
@@ -11,6 +12,7 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder('kozhilya_breadcrumbs');
 
+        /** @noinspection PhpUndefinedMethodInspection */
         return $treeBuilder->getRootNode()
             ->children()
             ->arrayNode('service_namespaces')

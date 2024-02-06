@@ -20,6 +20,5 @@ return static function (ContainerConfigurator $container) {
             service('kozhilya_breadcrumbs.breadcrumbs_service'),
             service('twig'),
         ])
-        ->tag('twig.extension')
-    ;
+        ->tag('twig.extension');
 };

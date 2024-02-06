@@ -5,11 +5,11 @@ namespace Kozhilya\BreadcrumbsBundle\DependencyInjection;
 use Exception;
 use Kozhilya\BreadcrumbsBundle\Breadcrumbs\DefinitionInterface;
 use Symfony\Bridge\Twig\Extension\LogoutUrlExtension;
+use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class KozhilyaBreadcrumbsExtension extends Extension
 {

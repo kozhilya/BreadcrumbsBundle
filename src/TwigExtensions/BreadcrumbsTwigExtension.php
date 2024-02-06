@@ -3,6 +3,7 @@
 
 namespace Kozhilya\BreadcrumbsBundle\TwigExtensions;
 
+use Exception;
 use Kozhilya\BreadcrumbsBundle\BreadcrumbsService;
 use Kozhilya\BreadcrumbsBundle\Builder\Generator;
 use Twig\Environment;
@@ -31,6 +32,9 @@ class BreadcrumbsTwigExtension extends AbstractExtension
         ];
     }
 
+    /**
+     * @throws Exception
+     */
     public function setBreadcrumbs(string $action, $entity = null, ...$params): void
     {
         $this->generator = $this->breadcrumbsService->build($action, $entity, ... $params);

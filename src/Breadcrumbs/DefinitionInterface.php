@@ -3,9 +3,9 @@
 namespace Kozhilya\BreadcrumbsBundle\Breadcrumbs;
 
 use Kozhilya\BreadcrumbsBundle\Nodes\NodeInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
-interface DefinitionInterface extends ContainerAwareInterface
+interface DefinitionInterface
 {
     /**
      * Список возможных элементов
