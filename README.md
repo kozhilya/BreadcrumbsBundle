@@ -100,3 +100,13 @@ class MainBreadcrumbs extends AbstractDefinition
 {# ... #}
 ```
 
+### Вставка крошек
+
+Пример файла `base.html.twig`
+```twig
+<body>
+    {{ breadcrumbs() }}
+    {% block content %}{% endblock %}
+</body>
+```
+
