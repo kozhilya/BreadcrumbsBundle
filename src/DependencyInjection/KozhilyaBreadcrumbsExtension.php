@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Kozhilya\BreadcrumbsBundle\DependencyInjection;
-
 
 use Exception;
 use Kozhilya\BreadcrumbsBundle\Breadcrumbs\DefinitionInterface;

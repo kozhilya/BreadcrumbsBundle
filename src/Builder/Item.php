@@ -21,6 +21,7 @@ class Item
     public function setName(string $name): Item
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -32,6 +33,7 @@ class Item
     public function setPath(string $path): Item
     {
         $this->path = $path;
+
         return $this;
     }
 
@@ -43,6 +45,7 @@ class Item
     public function setParams(array $params): Item
     {
         $this->params = $params;
+
         return $this;
     }
 

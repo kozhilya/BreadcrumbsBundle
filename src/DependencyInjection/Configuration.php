@@ -13,7 +13,6 @@ class Configuration implements ConfigurationInterface
 
         return $treeBuilder->getRootNode()
             ->children()
-//            ->scalarNode('loader_class')->isRequired()->end()
             ->arrayNode('service_namespaces')
             ->scalarPrototype()
             ->end() // service_namespaces.prototype
