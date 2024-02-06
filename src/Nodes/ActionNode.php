@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Kozhilya\BreadcrumbsBundle\Nodes;
-
 
 use Kozhilya\BreadcrumbsBundle\Builder\Generator;
 

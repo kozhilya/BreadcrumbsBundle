@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Kozhilya\BreadcrumbsBundle\Nodes;
-
 
 use Kozhilya\BreadcrumbsBundle\Builder\Generator;
 
@@ -62,7 +60,7 @@ abstract class AbstractNode implements NodeInterface
      * @return array
      * @internal
      */
-    protected abstract function getArgs(Generator $generator, string $action, $entity = null, ...$params): array;
+    abstract protected function getArgs(Generator $generator, string $action, $entity = null, ...$params): array;
 
     /**
      * Проверка, что сущность является объектом класса

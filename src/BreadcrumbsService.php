@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Kozhilya\BreadcrumbsBundle;
 
 use Exception;

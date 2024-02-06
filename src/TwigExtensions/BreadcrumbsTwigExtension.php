@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Kozhilya\BreadcrumbsBundle\TwigExtensions;
 
 use Exception;
@@ -52,7 +51,7 @@ class BreadcrumbsTwigExtension extends AbstractExtension
         }
 
         return $this->twig->render($this->breadcrumbsService->getTemplate(), [
-            'items' => $this->generator->getItems()
+            'items' => $this->generator->getItems(),
         ]);
     }
 

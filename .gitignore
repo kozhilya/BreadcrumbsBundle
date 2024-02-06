@@ -1,2 +1,6 @@
 vendor
 .idea
+
+# php-cs-fixer
+tools
+*.cache
