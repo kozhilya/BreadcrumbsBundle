@@ -6,22 +6,12 @@
     <services>
         <defaults autowire="true" autoconfigure="true"/>
 
-        <service id="kozhilya_breadcrumbs.tags.breadcrumb_definition_tag"
-                 class="Kozhilya\BreadcrumbsBundle\Tags\BreadcrumbDefinitionChain" public="true"/>
-        <service id="Kozhilya\BreadcrumbsBundle\Tags\BreadcrumbDefinitionChain"
-                 alias="kozhilya_breadcrumbs.tags.breadcrumb_definition_tag" public="false"/>
-
-
-        <!--        <prototype namespace="Kozhilya\BreadcrumbsBundle\Repository\" resource="../../../src/Repository/*"/>-->
-        <!--        <prototype namespace="Kozhilya\BreadcrumbsBundle\Controller\" resource="../../../src/Controller/*"/>-->
-        <!--        <prototype namespace="Kozhilya\BreadcrumbsBundle\Form\" resource="../../../src/Form/*"/>-->
-        <!--        <prototype namespace="Kozhilya\BreadcrumbsBundle\EventListener\" resource="../../../src/EventListener/*"/>-->
-
-
         <service id="kozhilya_breadcrumbs.breadcrumbs_service" class="Kozhilya\BreadcrumbsBundle\BreadcrumbsService"
                  public="true" shared="true">
             <argument type="string">%kozhilya_breadcrumbs.config.data%</argument>
-            <argument type="tagged_iterator" tag="kozhilya_breadcrumbs.tags.breadcrumb_definition_tag"/>
+            <argument type="tagged_iterator" tag="kozhilya_breadcrumbs.breadcrumb_definition_tag">
+                <exclude>Kozhilya\BreadcrumbsBundle\Breadcrumbs\DefinitionInterface</exclude>
+            </argument>
             <argument type="service" id="service_container"/>
         </service>
 

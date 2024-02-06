@@ -42,6 +42,6 @@ class KozhilyaBreadcrumbsExtension extends Extension
         $container->setParameter('kozhilya_breadcrumbs.config.data', $config);
 
         $container->registerForAutoconfiguration(DefinitionInterface::class)
-            ->addTag('kozhilya_breadcrumbs.tags.breadcrumb_definition_tag');
+            ->addTag('kozhilya_breadcrumbs.breadcrumb_definition_tag');
     }
 }

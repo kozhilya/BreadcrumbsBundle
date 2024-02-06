@@ -13,4 +13,12 @@ interface DefinitionInterface
      * @return NodeInterface[]
      */
     public function getBreadcrumbs(): array;
+
+    /**
+     * Установить контейнер
+     *
+     * @param ContainerInterface|null $container
+     * @internal
+     */
+    public function setContainer(?ContainerInterface $container = null): void;
 }
