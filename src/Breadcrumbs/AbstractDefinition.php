@@ -63,6 +63,6 @@ abstract class AbstractDefinition implements DefinitionInterface
         array $parameters = [],
         int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH
     ): string {
-        return $this->service->getRouter()->generate($route, $parameters, $referenceType);
+        return $this->getService()->getRouter()->generate($route, $parameters, $referenceType);
     }
 }
