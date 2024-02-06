@@ -23,7 +23,7 @@ abstract class AbstractDefinition implements DefinitionInterface
      *
      * @var BreadcrumbsService|null
      */
-    protected ?BreadcrumbsService $builder = null;
+    protected ?BreadcrumbsService $service = null;
 
     /**
      * Установить контейнер
@@ -41,13 +41,13 @@ abstract class AbstractDefinition implements DefinitionInterface
      *
      * @return BreadcrumbsService|null
      */
-    public function getBuilder(): ?BreadcrumbsService
+    public function getService(): ?BreadcrumbsService
     {
-        if (is_null($this->builder)) {
-            $this->builder = $this->container->get('kozhilya_breadcrumbs.breadcrumbs_service');
+        if (is_null($this->service)) {
+            $this->service = $this->container->get('kozhilya_breadcrumbs.breadcrumbs_service');
         }
 
-        return $this->builder;
+        return $this->service;
     }
 
     /**
@@ -63,6 +63,6 @@ abstract class AbstractDefinition implements DefinitionInterface
         array $parameters = [],
         int $referenceType = UrlGeneratorInterface::ABSOLUTE_PATH
     ): string {
-        return $this->container->get('router')->generate($route, $parameters, $referenceType);
+        return $this->service->getRouter()->generate($route, $parameters, $referenceType);
     }
 }

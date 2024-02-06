@@ -7,6 +7,7 @@ use Kozhilya\BreadcrumbsBundle\Breadcrumbs\DefinitionInterface;
 use Kozhilya\BreadcrumbsBundle\Builder\Generator;
 use Kozhilya\BreadcrumbsBundle\Nodes\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class BreadcrumbsService
 {
@@ -27,7 +28,8 @@ class BreadcrumbsService
     public function __construct(
         protected array $config,
         iterable $breadcrumbsDefinitions,
-        protected ContainerInterface $container
+        protected ContainerInterface $container,
+        protected UrlGeneratorInterface $router
     ) {
         $this->registerDefinitions($breadcrumbsDefinitions);
     }
@@ -79,5 +81,10 @@ class BreadcrumbsService
     public function getTemplate(): string
     {
         return $this->config['template'];
+    }
+
+    public function getRouter(): UrlGeneratorInterface
+    {
+        return $this->router;
     }
 }
